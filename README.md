@@ -68,7 +68,7 @@ now complete all for docker just start container and test
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `prompt` | `string` | **No Required**. Your Prompt |
+| `prompt` | `string` | **Required**. Your Prompt |
 
 ![Logo](https://coinaute.com/wp-content/uploads/2023/11/Design-sans-titre-46.png)
 
@@ -82,7 +82,7 @@ now complete all for docker just start container and test
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `prompt` | `string` | **No Required**. Your Prompt |
+| `prompt` | `string` | **Required**. Your Prompt |
 
 ![Logo](https://helios-i.mashable.com/imagery/articles/00veJ5qeI90cfXdfFzUfCrv/hero-image.fill.size_1248x702.v1708464912.jpg)
 
@@ -96,7 +96,7 @@ now complete all for docker just start container and test
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `prompt` | `string` | **No Required**. Your Prompt |
+| `prompt` | `string` | **Required**. Your Prompt |
 
 ![Logo](https://www.thephuketnews.com/photo/listing/2024/1707375278_1-org.jpg)
 
