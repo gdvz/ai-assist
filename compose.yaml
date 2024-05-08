@@ -11,6 +11,20 @@ services:
       - ollama
     networks:
       - springboot-assist-network
+
+  postgres:
+    image: ankane/pgvector:latest
+    environment:
+      POSTGRES_DB: vector_store
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: goodgood
+    ports:
+      - "5555:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - springboot-assist-network
+
   ollama:
     image: ollama/ollama:latest
     ports:
@@ -24,6 +38,9 @@ services:
     restart: always
     networks:
       - springboot-assist-network
+
+volumes:
+  pg_data:
 networks:
   springboot-assist-network:
     name: springboot-assist-network

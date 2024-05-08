@@ -66,4 +66,5 @@ class AssistControllerTest {
             .andExpect(content().contentType(MediaType.valueOf("text/plain;charset=UTF-8")))
             .andExpect(content().string(expectedResponse));
     }
+
 }
