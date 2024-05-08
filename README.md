@@ -2,7 +2,7 @@
 ![Logo](https://assets-global.website-files.com/59e16042ec229e00016d3a66/6441d5f76d21e1e4dee9ffa2_Gen%20AI%20blog_Blog%20hero.png)
 # Generative AI Assist Service
 
-Microservice RESTful API implement with Local Generative AI for learning and development
+Microservice RESTful API implement with Local Generative AI and OpenAI Embeddings for learning and development
 
 
 ## Tech Stack
@@ -12,16 +12,32 @@ Microservice RESTful API implement with Local Generative AI for learning and dev
 - Spring AI (https://spring.io/projects/spring-ai)
 - Ollama (https://ollama.com)
 - Docker (https://docker.com)
-
+- PGVector (https://github.com/pgvector/pgvector)
+  
 **AI Model**
 - Llama 3 (Meta) (https://llama.meta.com/llama3)
 - Gemma (Google) (https://ai.google.dev/gemma)
 - OpenThaiGPT (Thai DEV) (https://openthaigpt.aieat.or.th)
+- OpenAI Embeddings (Microsoft) (https://platform.openai.com/docs/guides/embeddings)
 
+## Features
+
+- API for Chat with local LLM (Llama3,Gemma,OpenThaiGPT)
+- API for Add data into Vector Database from example dataset (bbc_data.csv)
+- API for Search data from Vector Database (Similarity search)
+
+    
 ## Deployment
+```bash
+   need to fill application.properties OpenAI api key for Spring AI EmbeddingClient
+```
 ### Local
 To deploy this project run on local following these step
 
+Download and install
+```bash
+   https://github.com/pgvector/pgvector
+```
 Download and install
 ```bash
    https://ollama.com/download
@@ -100,6 +116,29 @@ now complete all for docker just start container and test
 
 ![Logo](https://www.thephuketnews.com/photo/listing/2024/1707375278_1-org.jpg)
 
+------------
+
+#### * Add data into vector database
+
+```http
+  GET /vector/addData
+```
+
+------------
+
+#### * Similarity search from vector database
+
+```http
+  GET /vector/search
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `query` | `string` | **Required**. Your Keyword for search |
+| `key` | `string` | **Required**. Your Metadata type |
+| `op` | `string` | **Required**. Operators of metadata (eq,gt,ge,lt,le,ne) |
+| `value` | `string` | **Required**. Your Metadata value |
+
 ## Documentation
 [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html)
 
@@ -113,6 +152,9 @@ now complete all for docker just start container and test
 
 [OpenThaiGPT](https://openthaigpt.aieat.or.th)
 
+[PGVector](https://github.com/pgvector/pgvector)
+
+[Vector Database](https://www.vultureprime.com/blogs/vector-database)
 
 
 
